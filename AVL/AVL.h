@@ -25,6 +25,8 @@ class AVL {
         void print(Node<T>* node) const;
         bool ancestors(const T& value, Node<T>* node) const;
 
+        Node<T>* search(Node<T>* node, const T& value) const;
+
     public:
         AVL(): root(nullptr) {}
         ~AVL();
@@ -34,6 +36,8 @@ class AVL {
         void remove(const T& value);
         void insert(const T& value);
         void ancestors(const T& value) const;
+
+        Node<T>* search(const T& value) const;
 };
 
 #include "AVL.tpp"
