@@ -17,7 +17,7 @@ template <typename T>
 T Stack<T>::pop () {
     if(isEmpty()) {
         cout << "Empty queue!" << endl;
-        throw std::runtime_error("Empty queue")
+        throw std::runtime_error("Empty stack");
     } else {
         Node<T>* temp = topNode;
         topNode = temp->getNext();
@@ -32,7 +32,7 @@ template <typename T>
 T Stack<T>::top() {
     if(isEmpty()) {
         cout << "Empty queue" << endl;
-        throw std::runtime_error("Empty queue")
+        throw std::runtime_error("Empty stack");
     } else {
         return topNode->getData();
     }

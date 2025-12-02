@@ -27,6 +27,6 @@ class Queue {
         void print() const;
 };
 
-#include "Queue.h"
+#include "Queue.tpp"
 
 #endif

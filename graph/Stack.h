@@ -26,6 +26,6 @@ class Stack {
         void print() const;
 };
 
-#include "Stack.h"
+#include "Stack.tpp"
 
 #endif
