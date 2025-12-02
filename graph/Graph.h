@@ -11,6 +11,8 @@ class Graph {
         bool* visited;
         int indexOf(const T& v) const;
         void resetVisited();
+        void DFSRecursive(int index);
+
     public:
         void dijkstra(const T& start);
         void dijkstra(const T& start, const T& end);
@@ -45,6 +47,8 @@ class Graph {
         void printMatrix() const;
         void BFS (const T& start);
         void DFS (const T& start);
+
+        void DFSRecursive(const T& start);
 };
 
 #include "Graph.tpp"

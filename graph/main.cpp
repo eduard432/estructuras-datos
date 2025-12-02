@@ -4,7 +4,7 @@
 using namespace std;
 
 int main () {
-    Graph<string> grafo(10);
+    Graph<string > grafo(10);
 
     grafo.addVertex("A");
     grafo.addVertex("B");
@@ -19,8 +19,7 @@ int main () {
     grafo.addEdge("D", "E", 1);
 
     grafo.printMatrix();
-    grafo.BFS("A");
-    grafo.DFS("A");
+    grafo.dijkstra("A", "E");
     
 
     return 0;
