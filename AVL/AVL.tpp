@@ -138,16 +138,19 @@ Node<T>* AVL<T>::remove(Node<T>* node, const T& value) {
         const int bf = balanceFactor(node);
 
         if(bf > 1 && balanceFactor(node->getLeft()) >= 0) {
-            // Pesado hacia la izquierda
+            // Pesado hacia la izquierda-izquierda
             return rotateRight(node);
         }
         if(bf < -1 && balanceFactor(node->getRight()) <= 0) {
+            // Pesado hacia la derecha-derecha
             return rotateLeft(node);
         }
-        if(bf > 1 && balanceFactor(node->getRight()) < 0) {
+        if(bf > 1 && balanceFactor(node->getLeft()) < 0) {
+            // Pesado hacia la izquieda-derecha
             return rotateLeftRight(node);
         }
         if(bf < - 1 && balanceFactor(node->getRight()) > 0) {
+            // Pesado hacia la derecha-izquierda
             return rotateRightLeft(node);
         }
 
